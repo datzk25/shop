@@ -1,0 +1,116 @@
+import { Category, Product, TopUser, Transaction, Review } from '@/types';
+
+export const mockCategories: Category[] = [
+  { id: '1', name: 'Acc Game VIP', slug: 'acc-game', icon: 'Gamepad2', count: 1250, image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=400' },
+  { id: '2', name: 'Acc Random', slug: 'acc-random', icon: 'Dices', count: 8520, image: 'https://images.unsplash.com/photo-1612287230202-1bf1d85d1bdf?auto=format&fit=crop&q=80&w=400' },
+  { id: '3', name: 'Tool Game', slug: 'tool-game', icon: 'Cpu', count: 145, image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&q=80&w=400' },
+  { id: '4', name: 'File Game Premium', slug: 'file-game', icon: 'FolderArchive', count: 320, image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=400' },
+  { id: '5', name: 'Dịch Vụ Cày Thuê', slug: 'cay-thue', icon: 'Zap', count: 12, image: 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&q=80&w=400' },
+  { id: '6', name: 'Vật Phẩm Ingame', slug: 'vat-pham', icon: 'ShieldAlert', count: 580, image: 'https://images.unsplash.com/photo-1560253023-3ec5d502959f?auto=format&fit=crop&q=80&w=400' },
+];
+
+export const mockProducts: Product[] = [
+  {
+    id: 'p1',
+    name: 'Acc Liên Quân Siêu Cực Phẩm - Full Tướng 350 Skins VIP',
+    code: 'LQ-99832',
+    category: 'acc-game',
+    oldPrice: 1250000,
+    newPrice: 850000,
+    discount: 32,
+    sales: 12,
+    stock: 1,
+    image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=600',
+    tags: ['Hot', 'Uy Tín'],
+    isFeatured: true,
+  },
+  {
+    id: 'p2',
+    name: 'Acc Valorant Cực Hạn - Reaver Vandal & Elderflame',
+    code: 'VAL-1029',
+    category: 'acc-game',
+    oldPrice: 2450000,
+    newPrice: 1890000,
+    discount: 22,
+    sales: 3,
+    stock: 1,
+    image: 'https://images.unsplash.com/photo-1553481187-be93c21490a9?auto=format&fit=crop&q=80&w=600',
+    tags: ['Giao Tự Động'],
+    isFeatured: true,
+  },
+  {
+    id: 'p3',
+    name: 'Hộp Quà May Mắn Random Steam Key AAA Cực Khủng',
+    code: 'RD-STEAM',
+    category: 'acc-random',
+    oldPrice: 100000,
+    newPrice: 20000,
+    discount: 80,
+    sales: 2451,
+    stock: 999,
+    image: 'https://images.unsplash.com/photo-1612287230202-1bf1d85d1bdf?auto=format&fit=crop&q=80&w=600',
+    tags: ['Bán Chạy'],
+    isFeatured: true,
+  },
+  {
+    id: 'p4',
+    name: 'Tool Hỗ Trợ Đồ Họa Cực Hạn - Optimize FPS 2026',
+    code: 'TOOL-FPS',
+    category: 'tool-game',
+    oldPrice: 300000,
+    newPrice: 150000,
+    discount: 50,
+    sales: 84,
+    stock: 120,
+    image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&q=80&w=600',
+    isFeatured: false,
+  },
+  {
+    id: 'p5',
+    name: 'File Việt Hóa Game GTA V Premium Sạch 100%',
+    code: 'FILE-GTAV',
+    category: 'file-game',
+    oldPrice: 90000,
+    newPrice: 45000,
+    discount: 50,
+    sales: 198,
+    stock: 500,
+    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=600',
+    isFeatured: false,
+  },
+  {
+    id: 'p6',
+    name: 'Cày Thuê Thách Đấu Liên Minh Huyền Thoại Việt Nam',
+    code: 'CAY-LOL',
+    category: 'cay-thue',
+    oldPrice: 500000,
+    newPrice: 350000,
+    discount: 30,
+    sales: 42,
+    stock: 99,
+    image: 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&q=80&w=600',
+    isFeatured: false,
+  },
+];
+
+export const mockTopUsers: TopUser[] = [
+  { rank: 1, name: 'Nguyễn Hoàng Long', avatar: 'https://i.pravatar.cc/150?img=33', id: '859203', amount: 15450000 },
+  { rank: 2, name: 'Lê Minh Quốc', avatar: 'https://i.pravatar.cc/150?img=12', id: '124958', amount: 12200000 },
+  { rank: 3, name: 'Trần Thanh Sơn', avatar: 'https://i.pravatar.cc/150?img=59', id: '748291', amount: 9800000 },
+  { rank: 4, name: 'Phạm Minh Đức', avatar: 'https://i.pravatar.cc/150?img=60', id: '459201', amount: 5600000 },
+  { rank: 5, name: 'Vũ Quốc Đạt', avatar: 'https://i.pravatar.cc/150?img=68', id: '394850', amount: 4200000 },
+];
+
+export const mockTransactions: Transaction[] = [
+  { id: 'DH592834', user: 'hoan***', product: 'Random Steam Key VIP', amount: 50000, time: '2 phút trước', status: 'Thành công' },
+  { id: 'DH182938', user: 'ducm***', product: 'Acc Liên Quân #99832', amount: 850000, time: '5 phút trước', status: 'Thành công' },
+  { id: 'DH482012', user: 'tran***', product: 'Dịch vụ Cày Thuê LOL', amount: 350000, time: '10 phút trước', status: 'Đang xử lý' },
+  { id: 'DH928104', user: 'quoc***', product: 'Tool FPS Optimize', amount: 150000, time: '15 phút trước', status: 'Thành công' },
+  { id: 'DH204859', user: 'pham***', product: 'Acc Valorant #1029', amount: 1890000, time: '20 phút trước', status: 'Thành công' },
+];
+
+export const mockReviews: Review[] = [
+  { id: '1', name: 'Trần Khôi Nguyên', avatar: 'https://i.pravatar.cc/150?img=11', rating: 5, content: 'Giao dịch siêu nhanh luôn, vừa bấm thanh toán phát là nhận thông tin tài khoản qua email ngay. Vote 5 sao!', role: 'Khách hàng thân thiết' },
+  { id: '2', name: 'Đặng Tuấn Kiệt', avatar: 'https://i.pravatar.cc/150?img=14', rating: 5, content: 'Bác chủ shop hỗ trợ siêu nhiệt tình. Tài khoản chuẩn mô tả, có sẵn skin VIP cực sướng tay!', role: 'Game thủ chuyên nghiệp' },
+  { id: '3', name: 'Võ Minh Thư', avatar: 'https://i.pravatar.cc/150?img=47', rating: 5, content: 'Thanh toán tự động siêu tiện lợi, nạp phát được cộng tiền ngay lập tức, web mượt không giật lag.', role: 'Thành viên Đồng' },
+];
