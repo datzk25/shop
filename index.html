@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NovaX Shop - Shop Game Uy Tín</title>
-
   <style>
     * {
       margin: 0;
@@ -12,7 +11,6 @@
       box-sizing: border-box;
       font-family: Arial, Helvetica, sans-serif;
     }
-
     body {
       background:
         radial-gradient(circle at 10% 10%, rgba(0, 119, 255, .18), transparent 30%),
@@ -21,13 +19,14 @@
       color: #fff;
       min-height: 100vh;
     }
-
     a {
       color: inherit;
       text-decoration: none;
     }
-
-    /* HEADER */
+    button {
+      font-family: inherit;
+    }
+    /* ================= HEADER ================= */
     header {
       position: sticky;
       top: 0;
@@ -36,7 +35,6 @@
       backdrop-filter: blur(18px);
       border-bottom: 1px solid rgba(255,255,255,.08);
     }
-
     .nav {
       max-width: 1200px;
       margin: auto;
@@ -46,33 +44,28 @@
       align-items: center;
       justify-content: space-between;
     }
-
     .logo {
       font-size: 25px;
       font-weight: 900;
       letter-spacing: 1px;
     }
-
     .logo span {
       color: #6c8cff;
     }
-
     .menu {
       display: flex;
       gap: 28px;
       list-style: none;
       color: #c9c9d1;
     }
-
     .menu a:hover {
       color: #fff;
     }
-
     .nav-buttons {
       display: flex;
       gap: 10px;
+      align-items: center;
     }
-
     .btn {
       border: 1px solid rgba(255,255,255,.12);
       background: rgba(255,255,255,.06);
@@ -82,20 +75,17 @@
       cursor: pointer;
       transition: .25s;
     }
-
     .btn:hover {
       transform: translateY(-2px);
       border-color: #6c8cff;
       box-shadow: 0 0 25px rgba(108,140,255,.2);
     }
-
     .btn-primary {
       border: none;
       background: linear-gradient(135deg, #4776ff, #8a45ff);
       box-shadow: 0 8px 30px rgba(91, 87, 255, .25);
     }
-
-    /* HERO */
+    /* ================= HERO ================= */
     .hero {
       max-width: 1200px;
       min-height: 600px;
@@ -105,11 +95,9 @@
       align-items: center;
       position: relative;
     }
-
     .hero-content {
       max-width: 720px;
     }
-
     .badge {
       display: inline-block;
       padding: 8px 14px;
@@ -119,20 +107,17 @@
       color: #9eafff;
       margin-bottom: 22px;
     }
-
     .hero h1 {
       font-size: clamp(45px, 7vw, 82px);
       line-height: 1;
       font-weight: 900;
       margin-bottom: 25px;
     }
-
     .gradient {
       background: linear-gradient(90deg, #6f91ff, #c16cff);
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .hero p {
       color: #a9abb7;
       font-size: 18px;
@@ -140,14 +125,12 @@
       max-width: 620px;
       margin-bottom: 32px;
     }
-
     .hero-actions {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
     }
-
-    /* STATS */
+    /* ================= STATS ================= */
     .stats {
       max-width: 1200px;
       margin: 0 auto 80px;
@@ -156,7 +139,6 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 15px;
     }
-
     .stat {
       padding: 25px;
       border: 1px solid rgba(255,255,255,.08);
@@ -165,47 +147,39 @@
       border-radius: 20px;
       text-align: center;
     }
-
     .stat strong {
       display: block;
       font-size: 28px;
       margin-bottom: 7px;
     }
-
     .stat span {
       color: #92949f;
     }
-
-    /* SECTION */
+    /* ================= SECTION ================= */
     section {
       max-width: 1200px;
       margin: auto;
       padding: 0 20px 90px;
     }
-
     .section-head {
       display: flex;
       align-items: end;
       justify-content: space-between;
       margin-bottom: 25px;
     }
-
     .section-head h2 {
       font-size: 32px;
     }
-
     .section-head p {
       color: #858793;
       margin-top: 8px;
     }
-
-    /* GAMES */
+    /* ================= GAMES ================= */
     .games {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 15px;
     }
-
     .game {
       min-height: 160px;
       border-radius: 20px;
@@ -220,37 +194,31 @@
         linear-gradient(145deg, rgba(80,100,255,.35), rgba(30,30,50,.2));
       transition: .3s;
     }
-
     .game:hover {
       transform: translateY(-6px);
       border-color: rgba(115,140,255,.5);
       box-shadow: 0 15px 40px rgba(0,0,0,.3);
     }
-
     .game-icon {
       position: absolute;
       top: 20px;
       right: 20px;
       font-size: 40px;
     }
-
     .game h3 {
       font-size: 18px;
       margin-bottom: 5px;
     }
-
     .game p {
       color: #aaa;
       font-size: 13px;
     }
-
-    /* PRODUCTS */
+    /* ================= PRODUCTS ================= */
     .products {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 18px;
     }
-
     .product {
       overflow: hidden;
       border: 1px solid rgba(255,255,255,.08);
@@ -258,12 +226,10 @@
       border-radius: 20px;
       transition: .3s;
     }
-
     .product:hover {
       transform: translateY(-5px);
       border-color: rgba(108,140,255,.4);
     }
-
     .product-image {
       height: 170px;
       display: flex;
@@ -274,151 +240,360 @@
         radial-gradient(circle at 50% 40%, rgba(110,130,255,.35), transparent 60%),
         #10121c;
     }
-
     .product-info {
       padding: 17px;
     }
-
     .product-info h3 {
       margin-bottom: 10px;
     }
-
     .price {
       color: #7e9aff;
       font-size: 20px;
       font-weight: 800;
       margin-bottom: 14px;
     }
-
     .buy {
       width: 100%;
     }
-
-    /* FOOTER */
+    /* ================= LOGIN MODAL ================= */
+    .auth-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(0,0,0,.72);
+      backdrop-filter: blur(12px);
+    }
+    .auth-overlay.active {
+      display: flex;
+      animation: fadeIn .25s ease;
+    }
+    .auth-box {
+      width: 100%;
+      max-width: 430px;
+      position: relative;
+      padding: 34px;
+      border-radius: 24px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(25,28,45,.96),
+          rgba(10,11,18,.97)
+        );
+      border: 1px solid rgba(255,255,255,.1);
+      box-shadow:
+        0 30px 100px rgba(0,0,0,.65),
+        0 0 60px rgba(91,87,255,.12);
+      animation: authUp .3s ease;
+    }
+    .auth-close {
+      position: absolute;
+      right: 18px;
+      top: 16px;
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 50%;
+      background: rgba(255,255,255,.05);
+      color: #aaa;
+      cursor: pointer;
+      font-size: 20px;
+    }
+    .auth-close:hover {
+      color: #fff;
+      border-color: #6c8cff;
+    }
+    .auth-logo {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .auth-logo span {
+      color: #6c8cff;
+    }
+    .auth-title {
+      text-align: center;
+      font-size: 25px;
+      margin-bottom: 7px;
+    }
+    .auth-subtitle {
+      text-align: center;
+      color: #858793;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+    .auth-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .input-group {
+      position: relative;
+    }
+    .input-group label {
+      display: block;
+      color: #c9cad2;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .input-wrap {
+      position: relative;
+    }
+    .input-wrap input {
+      width: 100%;
+      height: 48px;
+      padding: 0 45px 0 15px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.1);
+      outline: none;
+      color: #fff;
+      background: rgba(255,255,255,.05);
+      transition: .25s;
+    }
+    .input-wrap input::placeholder {
+      color: #666976;
+    }
+    .input-wrap input:focus {
+      border-color: #6c8cff;
+      box-shadow: 0 0 0 3px rgba(108,140,255,.1);
+    }
+    .password-toggle {
+      position: absolute;
+      right: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: transparent;
+      color: #777b89;
+      cursor: pointer;
+      font-size: 17px;
+    }
+    .password-toggle:hover {
+      color: #fff;
+    }
+    .auth-submit {
+      width: 100%;
+      height: 50px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      background: linear-gradient(135deg,#4776ff,#8a45ff);
+      box-shadow: 0 10px 30px rgba(91,87,255,.25);
+      transition: .25s;
+    }
+    .auth-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 35px rgba(91,87,255,.35);
+    }
+    .auth-switch {
+      text-align: center;
+      color: #858793;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+    .auth-switch button {
+      border: none;
+      background: transparent;
+      color: #7e9aff;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    .auth-switch button:hover {
+      text-decoration: underline;
+    }
+    .auth-message {
+      display: none;
+      padding: 11px 13px;
+      border-radius: 10px;
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+    .auth-message.show {
+      display: block;
+    }
+    .auth-message.error {
+      color: #ff9b9b;
+      background: rgba(255,70,70,.08);
+      border: 1px solid rgba(255,70,70,.15);
+    }
+    .auth-message.success {
+      color: #9cffc0;
+      background: rgba(60,255,140,.08);
+      border: 1px solid rgba(60,255,140,.15);
+    }
+    /* ================= USER BUTTON ================= */
+    .user-button {
+      display: none;
+      align-items: center;
+      gap: 8px;
+    }
+    .user-avatar {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg,#4776ff,#8a45ff);
+      font-size: 12px;
+      font-weight: bold;
+    }
+    /* ================= FOOTER ================= */
     footer {
       border-top: 1px solid rgba(255,255,255,.08);
       padding: 30px 20px;
       text-align: center;
       color: #777984;
     }
-
-    /* MOBILE */
+    /* ================= ANIMATION ================= */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes authUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px) scale(.97);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    /* ================= MOBILE ================= */
     @media (max-width: 900px) {
       .menu {
         display: none;
       }
-
       .games {
         grid-template-columns: repeat(2, 1fr);
       }
-
       .products {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-
     @media (max-width: 600px) {
       .nav {
         height: 62px;
       }
-
       .nav-buttons .btn:first-child {
         display: none;
       }
-
       .hero {
         min-height: 520px;
         padding-top: 70px;
       }
-
       .hero h1 {
         font-size: 48px;
       }
-
       .hero p {
         font-size: 15px;
       }
-
       .stats {
         grid-template-columns: 1fr;
       }
-
       .games {
         grid-template-columns: 1fr 1fr;
       }
-
       .products {
         grid-template-columns: 1fr;
+      }
+      .auth-box {
+        padding: 28px 20px;
       }
     }
   </style>
 </head>
-
 <body>
-
 <header>
   <div class="nav">
-    <a href="#" class="logo">NOVA<span>X</span></a>
-
+    <a href="#" class="logo">
+      NOVA<span>X</span>
+    </a>
     <ul class="menu">
       <li><a href="#home">Trang chủ</a></li>
       <li><a href="#games">Danh mục</a></li>
       <li><a href="#products">Kho acc</a></li>
       <li><a href="#contact">Liên hệ</a></li>
     </ul>
-
     <div class="nav-buttons">
-      <button class="btn">Đăng nhập</button>
-      <button class="btn btn-primary">Giỏ hàng 🛒</button>
+      <button
+        class="btn"
+        id="loginBtn"
+        onclick="openAuth('login')">
+        Đăng nhập
+      </button>
+      <div class="user-button" id="userButton">
+        <div class="user-avatar" id="userAvatar">N</div>
+        <button
+          class="btn"
+          onclick="logout()"
+          id="usernameBtn">
+          User
+        </button>
+      </div>
+      <button class="btn btn-primary">
+        Giỏ hàng 🛒
+      </button>
     </div>
   </div>
 </header>
-
 <main>
-
   <div class="hero" id="home">
     <div class="hero-content">
-      <div class="badge">⚡ SHOP GAME ONLINE 24/7</div>
-
+      <div class="badge">
+        ⚡ SHOP GAME ONLINE 24/7
+      </div>
       <h1>
         SHOP GAME<br>
-        <span class="gradient">UY TÍN &amp; AN TOÀN</span>
+        <span class="gradient">
+          UY TÍN &amp; AN TOÀN
+        </span>
       </h1>
-
       <p>
         Kho tài khoản game đa dạng, giao dịch nhanh chóng,
         tự động và bảo mật. Chọn sản phẩm yêu thích của bạn ngay hôm nay.
       </p>
-
       <div class="hero-actions">
-        <button class="btn btn-primary" onclick="scrollToProducts()">
+        <button
+          class="btn btn-primary"
+          onclick="scrollToProducts()">
           🛒 Mua ngay
         </button>
-
-        <button class="btn" onclick="scrollToGames()">
+        <button
+          class="btn"
+          onclick="scrollToGames()">
           🎮 Xem danh mục
         </button>
       </div>
     </div>
   </div>
-
   <div class="stats">
     <div class="stat">
-      <strong>10000K+</strong>
+      <strong>100K+</strong>
       <span>Khách hàng</span>
     </div>
-
     <div class="stat">
       <strong>500K+</strong>
       <span>Tài khoản đã bán</span>
     </div>
-
     <div class="stat">
       <strong>24/7</strong>
       <span>Hỗ trợ khách hàng</span>
     </div>
   </div>
-
   <section id="games">
     <div class="section-head">
       <div>
@@ -426,111 +601,536 @@
         <p>Lựa chọn tựa game bạn đang tìm kiếm</p>
       </div>
     </div>
-
     <div class="games">
-
       <div class="game">
         <div class="game-icon">⚔️</div>
         <h3>Liên Quân Mobile</h3>
         <p>Kho tài khoản Liên Quân</p>
       </div>
-
       <div class="game">
         <div class="game-icon">🔥</div>
         <h3>Free Fire</h3>
         <p>Acc Free Fire giá tốt</p>
       </div>
-
       <div class="game">
         <div class="game-icon">🔫</div>
         <h3>PUBG Mobile</h3>
         <p>Tài khoản PUBG</p>
       </div>
-
       <div class="game">
         <div class="game-icon">💥</div>
         <h3>Valorant</h3>
         <p>Kho acc Valorant</p>
       </div>
-
       <div class="game">
         <div class="game-icon">⚽</div>
         <h3>FC Online</h3>
         <p>Acc FC Online</p>
       </div>
-
     </div>
   </section>
-
   <section id="products">
-
     <div class="section-head">
       <div>
         <h2>🔥 Sản phẩm nổi bật</h2>
         <p>Một số sản phẩm đang được quan tâm</p>
       </div>
     </div>
-
     <div class="products">
-
       <div class="product">
-        <div class="product-image">⚔️</div>
+        <div class="product-image">
+          ⚔️
+        </div>
         <div class="product-info">
           <h3>Acc Liên Quân #001</h3>
-          <div class="price">99.000đ</div>
-          <button class="btn btn-primary buy">Mua ngay</button>
+          <div class="price">
+            99.000đ
+          </div>
+          <button class="btn btn-primary buy">
+            Mua ngay
+          </button>
         </div>
       </div>
-
       <div class="product">
-        <div class="product-image">🔥</div>
+        <div class="product-image">
+          🔥
+        </div>
         <div class="product-info">
           <h3>Acc Free Fire #002</h3>
-          <div class="price">149.000đ</div>
-          <button class="btn btn-primary buy">Mua ngay</button>
+          <div class="price">
+            149.000đ
+          </div>
+          <button class="btn btn-primary buy">
+            Mua ngay
+          </button>
         </div>
       </div>
-
       <div class="product">
-        <div class="product-image">🔫</div>
+        <div class="product-image">
+          🔫
+        </div>
         <div class="product-info">
           <h3>Acc PUBG #003</h3>
-          <div class="price">199.000đ</div>
-          <button class="btn btn-primary buy">Mua ngay</button>
+          <div class="price">
+            199.000đ
+          </div>
+          <button class="btn btn-primary buy">
+            Mua ngay
+          </button>
         </div>
       </div>
-
       <div class="product">
-        <div class="product-image">💥</div>
+        <div class="product-image">
+          💥
+        </div>
         <div class="product-info">
           <h3>Acc Valorant #004</h3>
-          <div class="price">249.000đ</div>
-          <button class="btn btn-primary buy">Mua ngay</button>
+          <div class="price">
+            249.000đ
+          </div>
+          <button class="btn btn-primary buy">
+            Mua ngay
+          </button>
         </div>
       </div>
-
     </div>
   </section>
-
 </main>
-
 <footer id="contact">
   © 2026 NovaX Shop — Shop game online
 </footer>
-
+<!-- ================= AUTH ================= -->
+<div
+  class="auth-overlay"
+  id="authOverlay"
+  onclick="closeAuthOutside(event)">
+  <div class="auth-box">
+    <button
+      class="auth-close"
+      onclick="closeAuth()">
+      ×
+    </button>
+    <!-- LOGIN -->
+    <div id="loginForm">
+      <div class="auth-logo">
+        NOVA<span>X</span>
+      </div>
+      <h2 class="auth-title">
+        Đăng nhập
+      </h2>
+      <p class="auth-subtitle">
+        Đăng nhập để tiếp tục mua sắm
+      </p>
+      <div
+        class="auth-message"
+        id="loginMessage">
+      </div>
+      <form
+        class="auth-form"
+        onsubmit="login(event)">
+        <div class="input-group">
+          <label>
+            Tài khoản hoặc Email
+          </label>
+          <div class="input-wrap">
+            <input
+              type="text"
+              id="loginUsername"
+              placeholder="Nhập tài khoản hoặc email"
+              required>
+          </div>
+        </div>
+        <div class="input-group">
+          <label>
+            Mật khẩu
+          </label>
+          <div class="input-wrap">
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Nhập mật khẩu"
+              required>
+            <button
+              type="button"
+              class="password-toggle"
+              onclick="togglePassword('loginPassword', this)">
+              👁
+            </button>
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="auth-submit">
+          Đăng nhập
+        </button>
+      </form>
+      <div class="auth-switch">
+        Chưa có tài khoản?
+        <button onclick="showRegister()">
+          Đăng ký ngay
+        </button>
+      </div>
+    </div>
+    <!-- REGISTER -->
+    <div id="registerForm" style="display:none">
+      <div class="auth-logo">
+        NOVA<span>X</span>
+      </div>
+      <h2 class="auth-title">
+        Tạo tài khoản
+      </h2>
+      <p class="auth-subtitle">
+        Đăng ký tài khoản NovaX miễn phí
+      </p>
+      <div
+        class="auth-message"
+        id="registerMessage">
+      </div>
+      <form
+        class="auth-form"
+        onsubmit="register(event)">
+        <div class="input-group">
+          <label>
+            Tên tài khoản
+          </label>
+          <div class="input-wrap">
+            <input
+              type="text"
+              id="registerUsername"
+              placeholder="Ví dụ: novax123"
+              minlength="4"
+              required>
+          </div>
+        </div>
+        <div class="input-group">
+          <label>
+            Email
+          </label>
+          <div class="input-wrap">
+            <input
+              type="email"
+              id="registerEmail"
+              placeholder="example@gmail.com"
+              required>
+          </div>
+        </div>
+        <div class="input-group">
+          <label>
+            Mật khẩu
+          </label>
+          <div class="input-wrap">
+            <input
+              type="password"
+              id="registerPassword"
+              placeholder="Tối thiểu 6 ký tự"
+              minlength="6"
+              required>
+            <button
+              type="button"
+              class="password-toggle"
+              onclick="togglePassword('registerPassword', this)">
+              👁
+            </button>
+          </div>
+        </div>
+        <div class="input-group">
+          <label>
+            Nhập lại mật khẩu
+          </label>
+          <div class="input-wrap">
+            <input
+              type="password"
+              id="registerConfirm"
+              placeholder="Nhập lại mật khẩu"
+              required>
+            <button
+              type="button"
+              class="password-toggle"
+              onclick="togglePassword('registerConfirm', this)">
+              👁
+            </button>
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="auth-submit">
+          Tạo tài khoản
+        </button>
+      </form>
+      <div class="auth-switch">
+        Đã có tài khoản?
+        <button onclick="showLogin()">
+          Đăng nhập
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 <script>
+  /* ================= SCROLL ================= */
   function scrollToProducts() {
-    document.getElementById("products").scrollIntoView({
-      behavior: "smooth"
-    });
+    document
+      .getElementById("products")
+      .scrollIntoView({
+        behavior: "smooth"
+      });
   }
-
   function scrollToGames() {
-    document.getElementById("games").scrollIntoView({
-      behavior: "smooth"
+    document
+      .getElementById("games")
+      .scrollIntoView({
+        behavior: "smooth"
+      });
+  }
+  /* ================= AUTH ================= */
+  function openAuth(type) {
+    document
+      .getElementById("authOverlay")
+      .classList.add("active");
+    if (type === "register") {
+      showRegister();
+    } else {
+      showLogin();
+    }
+    document.body.style.overflow = "hidden";
+  }
+  function closeAuth() {
+    document
+      .getElementById("authOverlay")
+      .classList.remove("active");
+    document.body.style.overflow = "";
+    clearMessages();
+  }
+  function closeAuthOutside(event) {
+    if (event.target.id === "authOverlay") {
+      closeAuth();
+    }
+  }
+  function showLogin() {
+    document
+      .getElementById("loginForm")
+      .style.display = "block";
+    document
+      .getElementById("registerForm")
+      .style.display = "none";
+    clearMessages();
+  }
+  function showRegister() {
+    document
+      .getElementById("loginForm")
+      .style.display = "none";
+    document
+      .getElementById("registerForm")
+      .style.display = "block";
+    clearMessages();
+  }
+  function clearMessages() {
+    const messages = [
+      document.getElementById("loginMessage"),
+      document.getElementById("registerMessage")
+    ];
+    messages.forEach(message => {
+      message.className = "auth-message";
+      message.textContent = "";
     });
   }
+  function showMessage(id, text, type) {
+    const message = document.getElementById(id);
+    message.textContent = text;
+    message.className =
+      "auth-message show " + type;
+  }
+  /* ================= PASSWORD ================= */
+  function togglePassword(inputId, button) {
+    const input =
+      document.getElementById(inputId);
+    if (input.type === "password") {
+      input.type = "text";
+      button.textContent = "🙈";
+    } else {
+      input.type = "password";
+      button.textContent = "👁";
+    }
+  }
+  /* ================= REGISTER ================= */
+  function register(event) {
+    event.preventDefault();
+    const username =
+      document
+        .getElementById("registerUsername")
+        .value
+        .trim();
+    const email =
+      document
+        .getElementById("registerEmail")
+        .value
+        .trim();
+    const password =
+      document
+        .getElementById("registerPassword")
+        .value;
+    const confirm =
+      document
+        .getElementById("registerConfirm")
+        .value;
+    if (password !== confirm) {
+      showMessage(
+        "registerMessage",
+        "Mật khẩu nhập lại không khớp.",
+        "error"
+      );
+      return;
+    }
+    const users =
+      JSON.parse(
+        localStorage.getItem("novax_users") || "[]"
+      );
+    const usernameExists =
+      users.some(
+        user =>
+          user.username.toLowerCase() ===
+          username.toLowerCase()
+      );
+    if (usernameExists) {
+      showMessage(
+        "registerMessage",
+        "Tên tài khoản đã tồn tại.",
+        "error"
+      );
+      return;
+    }
+    const emailExists =
+      users.some(
+        user =>
+          user.email.toLowerCase() ===
+          email.toLowerCase()
+      );
+    if (emailExists) {
+      showMessage(
+        "registerMessage",
+        "Email này đã được đăng ký.",
+        "error"
+      );
+      return;
+    }
+    users.push({
+      username: username,
+      email: email,
+      password: password
+    });
+    localStorage.setItem(
+      "novax_users",
+      JSON.stringify(users)
+    );
+    showMessage(
+      "registerMessage",
+      "Đăng ký thành công! Đang chuyển sang đăng nhập...",
+      "success"
+    );
+    setTimeout(() => {
+      document
+        .getElementById("loginUsername")
+        .value = username;
+      document
+        .getElementById("loginPassword")
+        .value = "";
+      showLogin();
+    }, 1000);
+  }
+  /* ================= LOGIN ================= */
+  function login(event) {
+    event.preventDefault();
+    const loginValue =
+      document
+        .getElementById("loginUsername")
+        .value
+        .trim()
+        .toLowerCase();
+    const password =
+      document
+        .getElementById("loginPassword")
+        .value;
+    const users =
+      JSON.parse(
+        localStorage.getItem("novax_users") || "[]"
+      );
+    const user =
+      users.find(
+        item =>
+          (
+            item.username.toLowerCase() === loginValue ||
+            item.email.toLowerCase() === loginValue
+          ) &&
+          item.password === password
+      );
+    if (!user) {
+      showMessage(
+        "loginMessage",
+        "Tài khoản hoặc mật khẩu không chính xác.",
+        "error"
+      );
+      return;
+    }
+    localStorage.setItem(
+      "novax_current_user",
+      JSON.stringify(user)
+    );
+    showMessage(
+      "loginMessage",
+      "Đăng nhập thành công!",
+      "success"
+    );
+    setTimeout(() => {
+      closeAuth();
+      updateUserUI();
+    }, 700);
+  }
+  /* ================= USER UI ================= */
+  function updateUserUI() {
+    const currentUser =
+      JSON.parse(
+        localStorage.getItem("novax_current_user")
+      );
+    const loginBtn =
+      document.getElementById("loginBtn");
+    const userButton =
+      document.getElementById("userButton");
+    const usernameBtn =
+      document.getElementById("usernameBtn");
+    const avatar =
+      document.getElementById("userAvatar");
+    if (currentUser) {
+      loginBtn.style.display = "none";
+      userButton.style.display = "flex";
+      usernameBtn.textContent =
+        currentUser.username;
+      avatar.textContent =
+        currentUser.username
+          .charAt(0)
+          .toUpperCase();
+    } else {
+      loginBtn.style.display = "block";
+      userButton.style.display = "none";
+    }
+  }
+  /* ================= LOGOUT ================= */
+  function logout() {
+    localStorage.removeItem(
+      "novax_current_user"
+    );
+    updateUserUI();
+  }
+  /* ================= AUTO LOGIN UI ================= */
+  updateUserUI();
+  /* ================= ESC CLOSE ================= */
+  document.addEventListener(
+    "keydown",
+    function(event) {
+      if (event.key === "Escape") {
+        closeAuth();
+      }
+    }
+  );
 </script>
-
 </body>
 </html>
